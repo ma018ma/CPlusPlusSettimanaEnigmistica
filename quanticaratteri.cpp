@@ -1,14 +1,22 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
-int main(){
+int main()
+{
     string parola;
-    cout<<"dammi una parola"<<endl;
-    cin>>parola;
-    int i=0;
-    while (i<parola.length()){
-        for (int conta=0; conta<parola[i];conta++)
-        cout<<"nella parola ci sono: "<<conta<<parola[i]<<endl;
-    i++;
+    int quante = 0;
+    int c;
+    cout << "dammi una parola" << endl;
+    cin >> parola;
+    for (int i = 0; i < parola.length(); i++)
+    {    
+        for (c = 0; c < parola.length(); c++)
+            if (parola[i] == parola[c])
+            {
+                quante++;
+            }
+       
+        cout << "nella parola ci sono: " << quante << parola[i] << endl;
+     quante = 0;
     }
-}  
+}
